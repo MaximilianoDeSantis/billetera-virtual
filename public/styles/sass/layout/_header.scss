@@ -1,0 +1,46 @@
+header {
+    background-color: #fff;
+}
+
+.header__nav {
+    @include flex(row,space-between, center);
+    @include wrapper;
+    margin-bottom: 3rem;
+
+    
+    
+    &__logo {
+        font-size: 3rem;
+        color: $primary-color--strong;
+    }
+    &__links-container {
+        @include flex(row, space-around, center,1.5rem );
+        padding-block: 2rem;
+
+        font-size: 1.5rem;
+    
+        & a {
+            color: $neutral-grey-600;
+            
+         
+        }
+
+        & li:last-child{
+
+            & a {
+                padding: .5rem 2rem;
+                color: $primary-color;
+                font-weight: bold;
+                background-color: $light-color;
+                border: 2px solid $primary-color;
+                border-radius: 24px;
+            }
+            
+        }
+
+        
+
+        
+
+    }
+}

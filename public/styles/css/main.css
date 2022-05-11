@@ -1,0 +1,143 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box; }
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0; }
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+  padding: 0; }
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth; }
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5; }
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto; }
+
+a {
+  text-decoration: none; }
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block; }
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit; }
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto; }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important; } }
+
+* {
+  margin: 0;
+  padding: 0; }
+
+body {
+  font-size: 62.5%;
+  background-color: #4062FF;
+  line-height: 1.6; }
+
+a {
+  text-decoration: none;
+  color: inherit; }
+
+ul {
+  padding: 0; }
+
+li {
+  list-style: none; }
+
+header {
+  background-color: #fff; }
+
+.header__nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0;
+  max-width: 1400px;
+  padding-inline: 1rem;
+  margin: 0 auto;
+  margin-bottom: 3rem; }
+  .header__nav__logo {
+    font-size: 3rem;
+    color: #1741FF; }
+  .header__nav__links-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    gap: 1.5rem;
+    padding-block: 2rem;
+    font-size: 1.5rem; }
+    .header__nav__links-container a {
+      color: #637381; }
+    .header__nav__links-container li:last-child a {
+      padding: .5rem 2rem;
+      color: #4062FF;
+      font-weight: bold;
+      background-color: #F2F8FF;
+      border: 2px solid #4062FF;
+      border-radius: 24px; }
+
+.index-hero {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0;
+  max-width: 1400px;
+  padding-inline: 1rem;
+  margin: 0 auto; }
+  .index-hero__title h2 {
+    color: #fff;
+    font-size: 9rem;
+    line-height: .8;
+    width: 8ch;
+    margin-bottom: 5rem; }
+  .index-hero__title a {
+    padding: .5rem 2rem;
+    font-size: 1.5rem;
+    color: #F2F8FF;
+    font-weight: bold;
+    background-color: #4062FF;
+    border: 2px solid #F2F8FF;
+    border-radius: 24px; }
