@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/css/main.css">
+    <title>Wala - Login</title>
+</head>
+<body>
+    <header>
+        <nav class="header__nav">
+
+            <!-- Logo a modificar  -->
+            <h1 class="header__nav__logo"><a href="../index.html">Wala</a></h1> 
+            <ul class="header__nav__links-container">
+                <li><a href="">Funcionalidades</a></li>
+                <li><a href="">Ayuda y seguridad</a></li>
+                <li><a href="">Costos</a></li>
+                <li><a href="">Promociones</a></li>
+                <li><a href="">Ingresar</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="sign-in-main">
+        <section class="separador">
+            <h2>Iniciar sesion</h2>
+            <form action="" id="form-sign-in">
+                <label for="login-user">Nombre de usuario, email o DNI:</label>
+                <input id="login-user" type="text" name="user" required>
+                <label for="login-password">Contraseña:</label>
+                <input id="login-password" type="password" name="password" required>
+                <div>
+                    <span><a href="../pages/sign-up.html">Registrate</a></span>
+                    <span><a href="">¿Olvidaste tu contraseña?</a></span>
+                </div>
+                <button id="login-btn" class="btn">Iniciar sesion</button>
+                <!-- <input id="login-btn" class="btn" type="submit" value="Iniciar sesion"> -->
+            </form>
+
+        </section>
+
+        <section class="sign-in-main__img">
+            <img src="../assets/img/sign-in.png" alt="">
+
+        </section>
+    </main>
+
+    <script src="../js/main.js" type="module"></script>
+</body>
+</html>

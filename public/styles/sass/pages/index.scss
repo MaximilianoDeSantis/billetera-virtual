@@ -2,6 +2,8 @@
 .index-hero {
     @include flex(row, space-between,center);
     @include wrapper;
+    height: 90vh;
+
 
 
     &__title {

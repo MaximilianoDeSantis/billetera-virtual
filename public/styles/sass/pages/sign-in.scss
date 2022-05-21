@@ -1,0 +1,60 @@
+
+.sign-in-main {
+    @include flex (row,unset,center);
+    height: 90vh;
+
+    &__img {
+        @include flex(row,center,center);
+        flex-basis: 50%;
+    }
+
+} 
+
+
+
+#form-sign-in {
+    @include flex (column,center);
+    font-size: 1.6rem;
+    color: #fff;
+
+    & input {
+        position: relative;
+        margin-block-start: .5rem;
+        background-color: $primary-color--soft;
+        border: none;
+        border-bottom: 2px solid #FFFFFF;
+        color: #fff;
+
+        &:focus {
+            border: none;
+            border-bottom: 6px solid #FFFFFF;
+            outline: none;
+            caret-color: #fff;
+        }
+    }
+
+    & label {
+        margin-block-start: 3rem;
+    }
+
+    & div {
+        @include flex (row,space-between,center);
+        margin-block-start: .5rem;
+        margin-block-end: 2rem;
+
+        & span {
+        
+            font-size: 1.4rem;
+            &:first-child {
+                text-decoration: underline;
+                font-weight: bold;
+            }
+            &:last-child{
+                font-size: 1.2rem;
+                color: $neutral-grey-300;
+            }
+        }
+    }
+    
+    
+}
