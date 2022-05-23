@@ -49,17 +49,18 @@ class usersRegister {
 
 
 export const controlUserValidation = (usuarioIngresado= undefined, contraseñaIngresada= undefined)=> {
-    actualizarListaUsuarios()
+    actualizarListaUsuarios() // actualizar valores de usuarios creados
     if (!Validation.empty({usuarioIngresado,contraseñaIngresada})) {
         return false
     }
+    
 
     for (const user in usuarios){
-
 
         if ((usuarios[user].Usuario.toLowerCase() === usuarioIngresado.toLowerCase()) || (usuarios[user].Mail.toLowerCase() === usuarioIngresado.toLowerCase())) {
 
             if (usuarios[user].Password === contraseñaIngresada) {
+                console.log("USUARIO CREADO!")
                return true;
             }
             else {
@@ -74,7 +75,6 @@ export const controlUserValidation = (usuarioIngresado= undefined, contraseñaIn
 
 export const createNewUser = (user = undefined,email = undefined,phone = undefined,password = undefined) => {
     if (!Validation.empty({user,email,phone,password})) {
-        console.log("empty");
         return false;
     }
         // ERROR VALIDACION MAIL A CHEQUEAR
@@ -94,10 +94,7 @@ export const createNewUser = (user = undefined,email = undefined,phone = undefin
 
     // CONTROLAR QUE EL USUARIO NO ESTE YA CREADO FALTA MEJORAR CODIGO
     for (const obj in usuarios) {
-        console.log('OBJ USUARIO ' + obj.Usuario)
-        console.log('OBJ MAIL ' + obj.Mail)
         if (usuarios[obj].Usuario === user.toLowerCase() || usuarios[obj].Mail === email.toLowerCase()) {
-            console.log("Usuario ya creado");
             return false
         }
     }
@@ -120,6 +117,7 @@ export const createNewUser = (user = undefined,email = undefined,phone = undefin
 
 
     actualizarListaUsuarios()
+    return true
 
 }
 

@@ -156,6 +156,23 @@ header {
   width: 50px;
   cursor: pointer; }
 
+.form-notification {
+  display: none;
+  text-align: center;
+  font-size: 1.5rem;
+  margin-block-start: .5rem;
+  padding: .5rem;
+  color: #fff; }
+
+.bg-green {
+  background-color: #54D62C; }
+
+.bg-red {
+  background-color: #FF4842; }
+
+.show-block {
+  display: block; }
+
 .index-hero {
   display: flex;
   flex-direction: row;

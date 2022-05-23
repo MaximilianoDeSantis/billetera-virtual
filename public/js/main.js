@@ -14,7 +14,9 @@ document.addEventListener('click', e => {
         if (controlUserValidation($inputUserName,$inputUserPassword)) {
             window.location.href = "../pages/portfolio.html"
         } else {
-            alert("error en datos")
+            const $notificationForm = document.getElementById("signUp-notification");
+            $notificationForm.classList.add("bg-red","show-block");
+            $notificationForm.innerText = 'Datos incorrectos';
         }
     }
 
@@ -26,7 +28,20 @@ document.addEventListener('click', e => {
         const $createUserPhone = document.getElementById("create-phone").value
         const $createUserPassword = document.getElementById("create-password").value
 
-        createNewUser($createUserName,$createUserEmail,$createUserPhone,$createUserPassword);
+        let control = createNewUser($createUserName,$createUserEmail,$createUserPhone,$createUserPassword);
+        
+        console.log(control)
+        if (control) {
+            const $notificationForm = document.getElementById("signUp-notification");
+            $notificationForm.classList.add("bg-green","show-block");
+            $notificationForm.innerText = 'Usuario creado con exito';
+        }
+        if (!control) {
+            const $notificationForm = document.getElementById("signUp-notification");
+            $notificationForm.classList.add("bg-red","show-block");
+            $notificationForm.innerText = 'Error';
+            // Corregir para detallar mejor lista de errores
+        }
     }
 
 
