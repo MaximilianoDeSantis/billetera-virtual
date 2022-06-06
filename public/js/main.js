@@ -10,7 +10,6 @@ $passwordSignIn = document.getElementById("sign-in-password"),
 $btnSignIn = document.getElementById("sign-in-btn");
 
 
-
 document.addEventListener("click" , e => {
     // BOTON INICIAR SESION
 
@@ -23,11 +22,23 @@ document.addEventListener("click" , e => {
             document.getElementById("login-user").value,
             document.getElementById("login-password").value,
         )) {
+            swal ({
+                title: "Log In",
+                text: "Bienvenido",
+                icon: "success",
+                button: "Cerrar"
+            })
             window.location.href = "../pages/portfolio.html"
         } else {
                 const $notificationForm = document.getElementById("signUp-notification");
-                $notificationForm.classList.add("bg-red","show-block");
-                $notificationForm.innerText = 'Datos incorrectos';
+                swal ({
+                    title: "Log In",
+                    text: "Error en los datos de logeo",
+                    icon: "warning",
+                    button: "Cerrar"
+                })
+            //    $notificationForm.classList.add("bg-red","show-block");
+            //    $notificationForm.innerText = 'Datos incorrectos';
         }
 
 
@@ -47,12 +58,27 @@ document.addEventListener("click" , e => {
             document.getElementById("create-email").value,
         )) {
             const $notificationForm = document.getElementById("signUp-notification");
-            $notificationForm.classList.add("bg-green","show-block");
-            $notificationForm.innerText = 'Usuario creado con exito';
+            document.getElementById("create-user").value =""
+            document.getElementById("create-password").value =""
+            document.getElementById("create-email").value =""
+            swal ({
+                title: "Registro",
+                text: "Usuario creado exitosamente",
+                icon: "success",
+                button: "Cerrar"
+            })
+        //    $notificationForm.classList.add("bg-green","show-block");
+        //    $notificationForm.innerText = 'Usuario creado con exito';
         } else {
             const $notificationForm = document.getElementById("signUp-notification");
-            $notificationForm.classList.add("bg-red","show-block");
-            $notificationForm.innerText = 'Error';
+            swal ({
+                title: "Registro",
+                text: "Error al registrarse verifique sus datos",
+                icon: "warning",
+                button: "Cerrar"
+            })
+        //    $notificationForm.classList.add("bg-red","show-block");
+        //    $notificationForm.innerText = 'Error';
         }
 
 
